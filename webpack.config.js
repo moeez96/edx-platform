@@ -26,7 +26,7 @@ var wpconfig = {
 
     output: {
         path: path.resolve(__dirname, 'common/static/bundles'),
-        filename: '[name].js',
+        filename: isProd ? '[name].[chunkhash].js' : '[name].js',
         libraryTarget: 'window'
     },
 
